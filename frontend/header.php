@@ -8,6 +8,7 @@
         <ul>
             <li><a href="index.php">Inicio</a></li>
             <li><a href="blog/index.php">Blog</a></li> <!-- Enlace al blog -->
+            <li><a href="fisioterapia/index.php">Fisioterapia</a></li> <!-- Enlace al blog -->
             <li><a href="contacto/index.php">Contacto</a></li>
         </ul>
     </nav>

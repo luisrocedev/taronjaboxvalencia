@@ -1,3 +1,6 @@
+
+console.log("Hola")
+
 // Hacemos la petición fetch al archivo backend.php para obtener las entradas del blog
 fetch('../backend/backend.php')
     .then(response => {
