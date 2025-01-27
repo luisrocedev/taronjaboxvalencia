@@ -29,6 +29,10 @@ Incluimos
 sudo systemctl reload apache2
 
 16:001 clonamos repositorio
+sudo git clone https://github.com/luisrocedev/taronjaboxvalencia.git .
+16:02 configurar permisos
+sudo chown -R www-data:www-data /var/www/taronjaboxvalencia
+sudo chmod -R 755 /var/www/taronjaboxvalencia
 
 
 
