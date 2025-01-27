@@ -34,6 +34,9 @@ sudo git clone https://github.com/luisrocedev/taronjaboxvalencia.git .
 sudo chown -R www-data:www-data /var/www/taronjaboxvalencia
 sudo chmod -R 755 /var/www/taronjaboxvalencia
 
+16:30 apuntamos servidor DNS A a nuestra ip 82.165.43.137
+16:32 Configurar directorio como seguro git config --global --add safe.directory /var/www/taronjaboxvalencia
+
 
 
 
