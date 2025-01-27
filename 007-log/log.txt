@@ -38,7 +38,7 @@ sudo chmod -R 755 /var/www/taronjaboxvalencia
 16:32 Configurar directorio como seguro git config --global --add safe.directory /var/www/taronjaboxvalencia
 
 
-
+16:43 sudo git pull clonar repositorio	
 
 
 
