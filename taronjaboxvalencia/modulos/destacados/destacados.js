@@ -1,5 +1,5 @@
 // Ruta al backend para obtener los destacados
-const rutaDestacados = "http://localhost/GitHub/Primero-de-DAM-Luis-Rodriguez/taronjaboxvalencia/005-destacados%20dinamico/modulos/destacados/api_destacados.php?tabla=destacados";
+const rutaDestacados = "/modulos/destacados/api_destacados.php?tabla=destacados";
 
 // Función para cargar destacados dinámicamente
 function cargarDestacados() {
