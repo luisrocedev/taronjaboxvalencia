@@ -1,0 +1,53 @@
+
+
+----------- HISTORIAL SERVIDOR darkorange.luisrocedev.com --------------
+
+15:58 crear usuario sudo adduser taronjaboxvalencia
+sudo usermod -aG www-data taronjaboxvalencia
+sudo usermod -aG taronjaboxvalencia
+
+15:58 crear carpeta de proyecto sudo mkdir -p /var/www/taronjaboxvalencia
+15:59 crear archivo configuración virtualhosts sudo nano /etc/apache2/sites-available/taronjaboxvalencia.luisrocedev.es.conf
+
+Incluimos 
+
+<VirtualHost *:80>
+    ServerName taronjaboxvalencia.luisrocedev.es
+    DocumentRoot /var/www/taronjaboxvalencia
+
+    <Directory /var/www/taronjaboxvalencia>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+16:00 habilitamos el sitio sudo a2ensite taronjaboxvalencia.luisrocedev.es.conf
+sudo systemctl reload apache2
+
+16:001 clonamos repositorio
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

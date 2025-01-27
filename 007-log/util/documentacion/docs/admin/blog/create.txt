@@ -1,0 +1,14 @@
+* Crea una nueva entrada en el blog y la inserta en la base de datos.
+ *
+ * Este archivo maneja la creación de una nueva entrada de blog a través de un formulario.
+ * El formulario recopila el título y el contenido de la entrada, los cuales se insertan en
+ * la tabla `blog_posts` de la base de datos. Si la inserción es exitosa, se muestra un
+ * mensaje de éxito, de lo contrario, se muestra un mensaje de error.
+ *
+ * La operación se realiza con seguridad utilizando sentencias preparadas para evitar
+ * inyecciones SQL.
+ *
+ * @param string $title   Título de la entrada del blog.
+ * @param string $content Contenido de la entrada del blog.
+ *
+ * @return void
