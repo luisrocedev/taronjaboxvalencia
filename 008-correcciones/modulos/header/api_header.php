@@ -1,19 +1,18 @@
 <?php
-require_once '../../backend/config/db_connect.php'; // Incluir la conexión
+// Incluir la configuración de la base de datos
+require_once __DIR__ . '/../../backend/config/db_connect.php';
+// Incluir la clase Database
+require_once __DIR__ . '/../../backend/includes/Database.php';
 
-// Obtener el dominio actual
-$baseURL = "http://" . $_SERVER['HTTP_HOST']; // Construye el dominio dinámico
+// Crear una instancia de la clase Database
+$database = new Database($conn);
 
-if (isset($_GET['tabla']) && $_GET['tabla'] === 'header') {
-    // Obtener todos los datos de la tabla `header`
-    $headerData = json_decode($conexionBD->pideAlgo('header'), true);
+// Obtener datos de la tabla "header"
+$header = $database->getAll('header');
 
-    // Actualizar las rutas relativas a absolutas
-    foreach ($headerData as &$item) {
-        $item['link'] = $baseURL . $item['link'];
-    }
+// Devolver los datos en formato JSON
+header('Content-Type: application/json');
+echo json_encode($header[0]); // Devolver solo el primer registro
 
-    echo json_encode($headerData); // Devolver los datos en formato JSON
-} else {
-    echo json_encode(['error' => 'Tabla no especificada o incorrecta']);
-}
+// Cerrar la conexión
+$database->close();
