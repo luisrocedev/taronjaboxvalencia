@@ -1,28 +1,20 @@
 <?php
 // Definir la ruta base del proyecto
-$baseURL = '/taronjaboxvalencia/taronjaboxvalencia'; // Ruta base relativa al subdirectorio adicional
+define('BASE_PATH', __DIR__ . '/008-correcciones');
 
 // Incluir el header
-include __DIR__ . '/taronjaboxvalencia/modulos/header/header.php';
+include BASE_PATH . '/modulos/header/header.php';
 ?>
 
 <main>
-    <!-- Contenido principal -->
+    <h1>Bienvenido al Proyecto</h1>
+    <p>Este es el índice principal del proyecto. A continuación, se muestran los destacados:</p>
 
-    <!-- Sección de destacados -->
-    <?php include __DIR__ . '/taronjaboxvalencia/modulos/destacados/destacados.php'; ?>
-
-    <!-- Sección de entradas de blog -->
-    <h2>Entradas de Blog</h2>
-    <div id="blog-posts"></div> <!-- Contenedor donde se mostrarán las entradas del blog -->
+    <!-- Incluir el módulo de destacados -->
+    <?php include BASE_PATH . '/modulos/destacados/destacados.php'; ?>
 </main>
 
 <?php
 // Incluir el footer
-include __DIR__ . '/taronjaboxvalencia/modulos/footer/footer.php';
+include BASE_PATH . '/modulos/footer/footer.php';
 ?>
-
-<!-- Vincular scripts y estilos -->
-<script src="<?php echo $baseURL; ?>/modulos/header/header.js" defer></script>
-<script src="<?php echo $baseURL; ?>/modulos/destacados/destacados.js" defer></script>
-<link rel="stylesheet" href="<?php echo $baseURL; ?>/modulos/destacados/destacados.css">
