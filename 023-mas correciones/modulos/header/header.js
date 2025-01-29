@@ -1,11 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Detectar la ruta base según la ubicación del archivo
+    // Obtener la ruta base detectando la carpeta en la que estamos trabajando
     let basePath = "";
-    if (window.location.pathname.includes("modulos")) {
-        basePath = "../backend/api/api_header.php";  // Si estamos en un módulo, subimos un nivel
+    let currentPath = window.location.pathname;
+
+    if (currentPath.includes("/modulos/")) {
+        basePath = "../../backend/api/api_header.php";  // Si estamos en un módulo, subimos dos niveles
     } else {
         basePath = "backend/api/api_header.php";  // Si estamos en index.php, usamos la ruta directa
     }
+
+    console.log("Cargando header desde:", basePath);  // Debug para verificar la ruta
 
     fetch(basePath)
         .then(response => {
@@ -15,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return response.json();
         })
         .then(datos => {
-            console.log("Datos recibidos del API Header:", datos); 
+            console.log("Datos recibidos del API Header:", datos);
 
             let cabecera = document.querySelector("#menu");
             if (!cabecera) {
@@ -28,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
             datos.forEach(dato => {
                 let li = document.createElement("li");
                 let enlace = document.createElement("a");
-                
+
                 enlace.textContent = dato.nombre;
                 enlace.href = dato.enlace;
 

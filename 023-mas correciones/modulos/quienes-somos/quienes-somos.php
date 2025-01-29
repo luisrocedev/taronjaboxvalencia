@@ -1,11 +1,16 @@
+<?php include("../header/header.php"); ?>
+
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
-    <?php include "../header/header.php"; ?>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiénes Somos - TaronjaBox</title>
 </head>
 
 <body>
+
     <section id="quienes-somos">
         <h2>Quiénes Somos</h2>
         <div id="infoQuienesSomos">
@@ -15,7 +20,8 @@
 
     <script src="quienes-somos.js"></script>
 
-    <?php include "../footer/footer.php"; ?>
+    <?php include("../footer/footer.php"); ?>
+
 </body>
 
 </html>

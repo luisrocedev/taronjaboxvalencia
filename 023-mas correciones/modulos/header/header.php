@@ -1,3 +1,7 @@
+<?php
+// Detectar si estamos en un módulo o en el index
+$basePath = (strpos($_SERVER['SCRIPT_NAME'], "/modulos/") !== false) ? "../header/" : "modulos/header/";
+?>
 <header>
     <nav>
         <ul id="menu">
@@ -6,12 +10,10 @@
     </nav>
 </header>
 
-<!-- Incluir `header.js` directamente en el HTML -->
+<!-- Incluir `header.js` y `header.css` dinámicamente -->
 <script>
-    <?php include "header.js"; ?>
+    <?php include $basePath . "header.js"; ?>
 </script>
-
-<!-- Incluir `header.css` directamente en el HTML -->
 <style>
-    <?php include "header.css"; ?>
+    <?php include $basePath . "header.css"; ?>
 </style>
