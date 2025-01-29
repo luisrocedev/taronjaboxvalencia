@@ -18,6 +18,7 @@
         config/
             db_connect.php
         includes/
+            Database.php
             phpinfo.php
             error.php
     modulos/
@@ -47,3 +48,4 @@
             header.js
             header.php
             api_header.php
+            header.css
