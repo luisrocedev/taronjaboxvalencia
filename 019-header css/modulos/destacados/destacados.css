@@ -1,0 +1,20 @@
+#destacado {
+    text-align: center;
+    margin: 20px auto;
+}
+
+#destacado img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#destacado h3 {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+#destacado p {
+    font-size: 18px;
+    margin: 10px 0;
+}
