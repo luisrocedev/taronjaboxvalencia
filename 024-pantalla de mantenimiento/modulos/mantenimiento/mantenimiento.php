@@ -5,7 +5,7 @@
     </div>
 </div>
 <script>
-    <?php include "mantenimiento.js" ?>
+
 </script>
 <style>
     <?php include "mantenimiento.css" ?>
