@@ -1,4 +1,6 @@
-<?php include "modulos/hero/hero.php"; ?>
+<script>
+    <?php include "../hero/hero.php"; ?>
+</script>
 <section id="bienvenida">
     <h1>Bienvenidos a TaronjaBox</h1>
     <p>Tu lugar de crossfit en valencia.</p>
