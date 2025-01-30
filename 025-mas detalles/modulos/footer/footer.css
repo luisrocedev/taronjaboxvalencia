@@ -1,10 +1,31 @@
+/* ========== ESTRUCTURA PARA QUE EL FOOTER SE QUEDE FIJO ABAJO ========== */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; /* Empuja el footer hacia abajo */
+}
+
 /* ========== ESTILOS DEL FOOTER ========== */
+footer {
+    width: 100%;
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+}
+
 .footer-container {
     background: #222;
     color: white;
     text-align: center;
-    padding: 20px 0;
-    margin-top: 30px;
     width: 100%;
 }
 
