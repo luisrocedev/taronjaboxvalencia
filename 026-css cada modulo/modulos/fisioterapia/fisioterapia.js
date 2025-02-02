@@ -2,14 +2,17 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch("../../backend/api/api_fisioterapia.php")
         .then(response => response.json())
         .then(data => {
+            console.log("Datos recibidos:", data); // Verifica en la consola
+
             let container = document.querySelector("#infoFisioterapia");
             container.innerHTML = "";
+
             data.forEach(servicio => {
                 let section = document.createElement("div");
                 section.innerHTML = `
-                    <h3>${servicio.titulo}</h3>
+                    <h3>${servicio.nombre}</h3>
                     <p>${servicio.descripcion}</p>
-                    <img src="${servicio.imagen}" alt="${servicio.titulo}">
+                    <p>Costo: ${servicio.costo} €</p>
                 `;
                 container.appendChild(section);
             });

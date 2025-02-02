@@ -3,7 +3,7 @@ require_once '../config/db_connect.php';
 
 $conexion = new ConexionBD();
 
-$query = "SELECT titulo, descripcion, imagen FROM quienes_somos ORDER BY id ASC";
+$query = "SELECT title, content, created_at FROM quienes_somos ORDER BY id ASC";
 $result = $conexion->conexion->query($query);
 
 $info = [];
