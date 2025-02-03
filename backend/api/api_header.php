@@ -5,7 +5,7 @@ ini_set('display_errors', 1);
 
 require_once '../config/db_connect.php';
 
-$base_url = "http://localhost/GitHub/Primero-de-DAM-Luis-Rodriguez/taronjaboxvalencia/027-detalles/";
+$base_url = "http://" . $_SERVER['HTTP_HOST'] . "/";
 
 $conexion = new ConexionBD();
 
