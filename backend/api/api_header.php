@@ -5,7 +5,12 @@ ini_set('display_errors', 1);
 
 require_once '../config/db_connect.php';
 
-$base_url = "http://" . $_SERVER['HTTP_HOST'] . "/";
+// Detectar si estamos en local o en el servidor
+if ($_SERVER['HTTP_HOST'] == "localhost") {
+    $base_url = "http://localhost/GitHub/taronjaboxvalencia/";  // Local
+} else {
+    $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/";  // Servidor
+}
 
 $conexion = new ConexionBD();
 
@@ -15,8 +20,8 @@ $result = $conexion->conexion->query($query);
 $menu = [];
 
 while ($row = $result->fetch_assoc()) {
-    // Si el enlace no es una URL absoluta (http), añadimos la URL base
-    $row['enlace'] = (strpos($row['enlace'], 'http') === 0) ? $row['enlace'] : $base_url . $row['enlace'];
+    // Construir correctamente la URL según el entorno
+    $row['enlace'] = $base_url . ltrim($row['enlace'], '/');
     $menu[] = $row;
 }
 
