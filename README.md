@@ -99,7 +99,6 @@ Si deseas ver el **manual detallado del código**, puedes hacerlo de dos maneras
 2. **Explorando directamente el código fuente en el repositorio de TaronjaBoxValencia**, donde el código está comentado para facilitar su comprensión.
 
 📌 **Repositorio del script:** [Enlace pendiente a GitHub]  
-📌 **Repositorio del código:** [https://github.com/luisrocedev/taronjaboxvalencia](https://github.com/luisrocedev/taronjaboxvalencia/tree/main)
 
 ---
 
