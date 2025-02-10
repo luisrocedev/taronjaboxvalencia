@@ -98,7 +98,9 @@ Si deseas ver el **manual detallado del código**, puedes hacerlo de dos maneras
 1. **Accediendo al repositorio del proyecto script**, donde se incluyen explicaciones generadas automáticamente mediante **docstrings en PHP**.
 2. **Explorando directamente el código fuente en el repositorio de TaronjaBoxValencia**, donde el código está comentado para facilitar su comprensión.
 
-📌 **Repositorio del script:** [Enlace pendiente a GitHub]  
+📌 **Repositorio del script:** [Enlace al repositorio](https://github.com/luisrocedev/scriptdocumentacion)
+
+📌 **Repositorio del Proyecto:** [Enlace al proyecto taronjaboxvalencia](https://github.com/luisrocedev/taronjaboxvalencia)
 
 ---
 
