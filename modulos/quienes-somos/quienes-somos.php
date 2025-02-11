@@ -11,9 +11,9 @@
 <body>
 
     <section id="quienes-somos">
-        <h2>Quiénes Somos</h2>
+        <h3></h3>
         <div id="infoQuienesSomos">
-            <p>Cargando información...</p>
+            <p></p>
         </div>
     </section>
 

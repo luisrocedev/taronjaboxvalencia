@@ -2,16 +2,15 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch("../../backend/api/api_quienes_somos.php")
         .then(response => response.json())
         .then(data => {
-            console.log("Datos recibidos de API:", data); // Verifica en consola
-
             let container = document.querySelector("#infoQuienesSomos");
             container.innerHTML = "";
-            
-            data.forEach(info => {
+            data.forEach(persona => {
                 let section = document.createElement("div");
+                section.classList.add("card");
                 section.innerHTML = `
-                    <h3>${info.title}</h3> 
-                    <p>${info.content}</p> s
+                    <img src="${persona.imagen}" alt="${persona.title}">
+                    <h3>${persona.title}</h3>
+                    <p>${persona.content}</p>
                 `;
                 container.appendChild(section);
             });
