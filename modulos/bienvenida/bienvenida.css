@@ -1,0 +1,64 @@
+/* ========== ESTILOS PARA SECCIÓN DE BIENVENIDA ========== */
+#bienvenida {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 80vh;
+    background: linear-gradient(135deg, rgba(255,127,80,0.8), rgba(255,99,71,0.8)), url('../img/entrenamiento.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#bienvenida h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#bienvenida p {
+    font-size: 18px;
+    max-width: 700px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+#bienvenida .btn {
+    background: white;
+    color: #ff7f50;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#bienvenida .btn:hover {
+    background: #b34c26;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    #bienvenida {
+        height: 60vh;
+        padding: 15px;
+    }
+
+    #bienvenida h1 {
+        font-size: 28px;
+    }
+
+    #bienvenida p {
+        font-size: 16px;
+    }
+}

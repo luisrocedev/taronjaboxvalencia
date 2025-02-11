@@ -20,6 +20,7 @@ footer {
     text-align: center;
     padding: 10px 0;
     margin-top: auto;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .footer-container {
@@ -27,6 +28,7 @@ footer {
     color: white;
     text-align: center;
     width: 100%;
+    padding: 10px 0;
 }
 
 /* ========== TEXTO DEL FOOTER ========== */

@@ -1,4 +1,4 @@
-/* ========== RESET BÁSICO ========== */
+/* ========== RESET GLOBAL Y ESTILOS GENERALES ========== */
 * {
     margin: 0;
     padding: 0;
@@ -14,60 +14,19 @@ body {
     font-size: 16px;
 }
 
-/* ========== HEADER ========== */
-header {
-    background-color: #ff8c00;
-    padding: 10px 0;
-    text-align: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
 }
 
-/* Ajuste para evitar que el contenido quede debajo del header */
-body {
-    padding-top: 70px;
+h1, h2, h3 {
+    color: #222;
+    font-weight: bold;
 }
 
-/* ========== NAVEGACIÓN ========== */
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-}
-
-#menu {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-}
-
-#menu li {
-    list-style: none;
-}
-
-#menu a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
-    font-weight: 600;
-    display: block;
-}
-
-#menu a:hover {
-    background: white;
-    color: #ff8c00;
-}
-
-/* ========== BOTONES MEJORADOS ========== */
+/* ========== BOTONES ========== */
 .btn {
     display: inline-block;
     background: linear-gradient(135deg, #ff8c00, #e67e00);

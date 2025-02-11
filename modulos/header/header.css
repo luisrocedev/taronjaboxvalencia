@@ -1,35 +1,38 @@
-/* ========== ESTILOS DEL HEADER ========== */
+/* ========== ESTILOS PARA HEADER MINIMALISTA MEJORADO ========== */
 header {
-    background-color: #ff8c00;
-    padding: -5px 0;
+    background-color: #ff7f50;
+    padding: 8px 0;
     text-align: center;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    min-height: 40px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Ajuste para evitar que el contenido quede debajo del header */
 body {
-    padding-top: 90px;
+    padding-top: 45px;
 }
 
-/* ========== NAVEGACIÓN ========== */
 nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px;
+    padding: 5px 15px;
+    max-width: 1200px;
+    width: 100%;
 }
 
 #menu {
     list-style: none;
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 8px;
     padding: 0;
     margin: 0;
 }
@@ -41,35 +44,15 @@ nav {
 #menu a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
-    padding: 10px 15px;
-    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px 12px;
+    border-radius: 3px;
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
-    font-weight: 600;
+    font-weight: bold;
     display: block;
 }
 
 #menu a:hover {
-    background: white;
-    color: #ff8c00;
-}
-
-/* ========== RESPONSIVE ========== */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    #menu {
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
-    }
-
-    #menu a {
-        display: block;
-        padding: 10px;
-        text-align: center;
-    }
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
 }

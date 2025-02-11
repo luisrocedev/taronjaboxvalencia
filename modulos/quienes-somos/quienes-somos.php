@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiénes Somos - TaronjaBox</title>
+    <link rel="stylesheet" href="quienes-somos.css">
 </head>
 
 <body>
