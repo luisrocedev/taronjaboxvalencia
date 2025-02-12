@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planes de Suscripción - TaronjaBox</title>
+    <link rel="stylesheet" href="planes-suscripcion.css">
 </head>
 
 <body>

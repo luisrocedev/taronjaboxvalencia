@@ -1,5 +1,72 @@
-header { 
-    text-align: center; 
-    padding: 20px; 
-    background-color: #f8f9fa; 
+/* ========== ESTILOS PARA SECCIÓN DE ENTRENAMIENTOS ========== */
+#workouts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: var(--light-gray);
+    border-radius: 10px;
+    width: 100%;
+}
+
+#workouts h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+#infoWorkouts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+}
+
+/* ========== ESTILOS PARA LAS IMÁGENES DE ENTRENAMIENTOS ========== */
+#infoWorkouts img {
+    width: 100%; /* Ajusta el ancho al 100% del contenedor */
+    max-width: 400px; /* Límite máximo para evitar imágenes gigantes */
+    height: auto; /* Mantiene la proporción */
+    object-fit: cover; /* Evita distorsiones */
+    aspect-ratio: 16/9; /* Mantiene las imágenes rectangulares */
+    border-radius: 10px; /* Bordes redondeados para una mejor estética */
+    margin-bottom: 15px;
+}
+
+#infoWorkouts strong {
+    display: block;
+    margin-top: 10px;
+    font-size: 1.3rem;
+    color: var(--dark-color);
+}
+
+/* ========== RESPONSIVIDAD ========== */
+@media (max-width: 768px) {
+    #workouts {
+        padding: 30px 15px;
+    }
+    
+    #workouts h2 {
+        font-size: 2rem;
+    }
+    
+    #infoWorkouts {
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+    
+    #infoWorkouts img {
+        max-width: 100%;
+        aspect-ratio: 16/9;
+    }
 }

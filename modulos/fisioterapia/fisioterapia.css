@@ -1,5 +1,38 @@
-header { 
-    text-align: center; 
-    padding: 20px; 
-    background-color: #f8f9fa; 
+/* ========== ESTILOS PARA SECCIÓN DE FISIOTERAPIA ========== */
+#fisioterapia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: var(--light-gray);
+    border-radius: 10px;
+    min-height: 300px;
+}
+
+#fisioterapia h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+#infoFisioterapia {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== RESPONSIVIDAD ========== */
+@media (max-width: 768px) {
+    #fisioterapia {
+        padding: 30px 15px;
+    }
+    
+    #infoFisioterapia {
+        font-size: 1.2rem;
+        padding: 15px;
+    }
 }

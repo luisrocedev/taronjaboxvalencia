@@ -1,19 +1,18 @@
-/* ========== ESTILOS PARA CONTACTO ========== */
+/* ========== ESTILOS PARA SECCIÓN DE CONTACTO ========== */
 #contacto {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     padding: 50px 20px;
-    background-color: #f5f5f5;
+    background-color: var(--light-gray);
+    border-radius: 10px;
 }
 
 #contacto h2 {
-    font-size: 28px;
-    color: #ff7f50;
+    font-size: 2.5rem;
+    color: var(--primary-color);
     margin-bottom: 20px;
-    text-transform: uppercase;
-    font-weight: bold;
 }
 
 #formContacto {
@@ -22,43 +21,61 @@
     gap: 15px;
     width: 100%;
     max-width: 500px;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 #formContacto input,
 #formContacto textarea {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
+    padding: 12px;
+    border: 2px solid var(--primary-color);
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 1rem;
+    outline: none;
 }
 
 #formContacto textarea {
     resize: none;
-    height: 100px;
+    height: 150px;
 }
 
 #formContacto button {
-    background: #ff7f50;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    background-color: var(--primary-color);
     color: white;
-    padding: 12px;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
     cursor: pointer;
     transition: background 0.3s ease-in-out;
 }
 
 #formContacto button:hover {
-    background: #e5673f;
+    background-color: darken(var(--primary-color), 10%);
 }
 
 #respuesta {
     margin-top: 15px;
-    font-size: 14px;
-    color: #444;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+/* ========== RESPONSIVIDAD ========== */
+@media (max-width: 768px) {
+    #contacto {
+        padding: 30px 15px;
+    }
+    
+    #contacto h2 {
+        font-size: 2rem;
+    }
+    
+    #formContacto input,
+    #formContacto textarea {
+        font-size: 0.9rem;
+    }
+    
+    #formContacto button {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
 }

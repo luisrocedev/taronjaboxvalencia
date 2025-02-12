@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Entrenamientos - TaronjaBox</title>
+    <link rel="stylesheet" href="workouts.css">
 </head>
 
 <body>

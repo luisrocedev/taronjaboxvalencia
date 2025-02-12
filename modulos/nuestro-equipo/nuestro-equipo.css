@@ -1,85 +1,53 @@
-/* ========== ESTILOS MODERNOS PARA SECCIÓN NUESTRO EQUIPO ========== */
+/* ========== ESTILOS PARA SECCIÓN DE NUESTRO EQUIPO ========== */
 #nuestro-equipo {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 60px 20px;
-    background-color: #f9f9f9;
+    padding: 50px 20px;
+    background-color: var(--light-gray);
+    border-radius: 10px;
 }
 
 #nuestro-equipo h2 {
-    font-size: 32px;
-    color: #ff7f50;
-    margin-bottom: 30px;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 1px;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
 }
 
 #infoEquipo {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-    max-width: 1200px;
-    padding: 20px;
-}
-
-.equipo-card {
+    font-size: 1.5rem;
+    color: var(--text-color);
     background: white;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    margin: 15px;
-    max-width: 320px;
-    transition: transform 0.3s, box-shadow 0.3s;
     padding: 20px;
-    text-align: center;
-    position: relative;
-}
-
-.equipo-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-.equipo-card img {
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
     width: 100%;
-    height: 240px;
-    object-fit: cover;
-    border-radius: 12px 12px 0 0;
 }
 
-.equipo-card h3 {
-    color: #ff7f50;
-    font-size: 24px;
-    margin: 15px 0;
-    font-weight: bold;
+/* ========== ESTILOS PARA LAS IMÁGENES DEL EQUIPO ========== */
+#infoEquipo img {
+    width: 100%; /* Ajusta el ancho al 100% del contenedor */
+    max-width: 300px; /* Límite máximo para evitar imágenes gigantes */
+    height: auto; /* Mantiene la proporción */
+    object-fit: cover; /* Evita distorsiones */
+    aspect-ratio: 1/1; /* Mantiene las imágenes cuadradas */
+    border-radius: 10px; /* Bordes redondeados para una mejor estética */
 }
 
-.equipo-card p {
-    font-size: 16px;
-    color: #555;
-    padding: 10px;
-    line-height: 1.6;
-}
-
-.equipo-card .social-icons {
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
-}
-
-.equipo-card .social-icons a {
-    color: #ff7f50;
-    font-size: 18px;
-    transition: color 0.3s ease-in-out;
-}
-
-.equipo-card .social-icons a:hover {
-    color: #e5673f;
+/* ========== RESPONSIVIDAD ========== */
+@media (max-width: 768px) {
+    #nuestro-equipo {
+        padding: 30px 15px;
+    }
+    
+    #nuestro-equipo h2 {
+        font-size: 2rem;
+    }
+    
+    #infoEquipo {
+        font-size: 1.2rem;
+        padding: 15px;
+    }
 }

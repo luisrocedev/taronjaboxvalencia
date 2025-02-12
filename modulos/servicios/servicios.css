@@ -1,42 +1,85 @@
+/* ========== ESTILOS PARA SECCIÓN DE SERVICIOS ========== */
 #servicios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     padding: 50px 20px;
+    background-color: var(--light-gray);
+    border-radius: 10px;
+}
+
+#servicios h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 30px;
 }
 
 .servicios-grid {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
 }
 
 .servicio {
-    width: 300px;
-    text-align: center;
+    background: white;
     padding: 20px;
-    border: 1px solid #ddd;
     border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.servicio:hover {
+    transform: translateY(-5px);
 }
 
 .servicio img {
     width: 100%;
+    max-height: 200px;
+    object-fit: cover;
     border-radius: 10px;
 }
 
 .servicio h3 {
+    font-size: 1.8rem;
     margin: 15px 0;
+    color: var(--dark-color);
+}
+
+.servicio p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 15px;
 }
 
 .servicio a {
     display: inline-block;
-    margin-top: 10px;
-    padding: 8px 15px;
-    background: #3498db;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    transition: background 0.3s ease-in-out;
 }
 
 .servicio a:hover {
-    background: #2980b9;
+    background-color: darken(var(--primary-color), 10%);
+}
+
+/* ========== RESPONSIVIDAD ========== */
+@media (max-width: 768px) {
+    #servicios {
+        padding: 30px 15px;
+    }
+    
+    #servicios h2 {
+        font-size: 2rem;
+    }
+    
+    .servicios-grid {
+        grid-template-columns: 1fr;
+    }
 }
