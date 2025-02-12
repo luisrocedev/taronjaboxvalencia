@@ -47,4 +47,21 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         })
         .catch(error => console.error("Error al cargar la cabecera:", error));
+
+    // ============================
+    // Función para desplegar menú en móviles
+    // ============================
+
+    const nav = document.querySelector("nav");
+    const menu = document.getElementById("menu");
+
+    const toggleButton = document.createElement("button");
+    toggleButton.innerHTML = "☰"; // Icono de menú hamburguesa
+    toggleButton.classList.add("menu-toggle");
+
+    nav.prepend(toggleButton);
+
+    toggleButton.addEventListener("click", function () {
+        menu.classList.toggle("active");
+    });
 });
