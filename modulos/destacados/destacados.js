@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 // Crear estructura interna
                 item.innerHTML = `
-                    <img src="${destacado.imagen}" alt="${destacado.titulo}" onerror="this.src='public/img/placeholder.png'">
+                    <img src="${destacado.imagen}" alt="${destacado.titulo}">
                     <h3>${destacado.titulo}</h3>
                     <p>${destacado.descripcion}</p>
                     <a href="${destacado.enlace}" target="_blank" rel="noopener noreferrer">Ver más</a>
