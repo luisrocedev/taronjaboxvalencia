@@ -1,24 +1,24 @@
 <section id="servicios">
-    <h2>Nuestros Servicios</h2>
+    <h2 class="titulo-seccion">Nuestros Servicios</h2>
     <div class="servicios-grid">
         <div class="servicio">
-            <img src="img/entrenamiento.jpg" alt="Entrenamiento">
-            <h3>Entrenamiento</h3>
-            <p>Programas de entrenamiento personalizados.</p>
-            <a href="modulos/workouts/workouts.php">Ver más</a>
+            <img src="modulos/workouts/img/train.jpg" alt="Entrenamiento">
+            <div class="servicio-info">
+                <h3>Entrenamiento</h3>
+                <p>Programas de entrenamiento personalizados para todos los niveles.</p>
+                <a href="modulos/workouts/workouts.php" class="btn">Ver más</a>
+            </div>
         </div>
+
         <div class="servicio">
-            <img src="img/fisioterapia.jpg" alt="Fisioterapia">
-            <h3>Fisioterapia</h3>
-            <p>Recuperación y prevención de lesiones.</p>
-            <a href="modulos/fisioterapia/fisioterapia.php">Ver más</a>
-        </div>
-        <div class="servicio">
-            <img src="img/nutricion.jpg" alt="Nutrición">
-            <h3>Nutrición</h3>
-            <p>Planificación de dietas y asesoramiento.</p>
-            <a href="modulos/planes-suscripcion/planes-suscripcion.php">Ver más</a>
+            <img src="modulos/fisioterapia/img/fisioterapia.jpg" alt="Fisioterapia">
+            <div class="servicio-info">
+                <h3>Fisioterapia</h3>
+                <p>Recuperación, prevención y tratamiento de lesiones para tu bienestar.</p>
+                <a href="modulos/fisioterapia/fisioterapia.php" class="btn">Ver más</a>
+            </div>
         </div>
     </div>
 </section>
+
 <link rel="stylesheet" href="modulos/servicios/servicios.css">
