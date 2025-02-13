@@ -1,81 +1,82 @@
-/* ========== ESTILOS PARA SECCIÓN DE CONTACTO ========== */
+/* ======= SECCIÓN CONTACTO ======= */
 #contacto {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 80px 0;
     text-align: center;
-    padding: 50px 20px;
     background-color: var(--light-gray);
+}
+
+#contacto .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
     border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* ======= TITULO ======= */
 #contacto h2 {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 20px;
+    font-size: 2rem;
+    color: var(--dark-color);
+    margin-bottom: 10px;
 }
 
-#formContacto {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 100%;
-    max-width: 500px;
+/* ======= FORMULARIO ======= */
+.input-group {
+    margin-bottom: 15px;
 }
 
-#formContacto input,
-#formContacto textarea {
+.input-group input,
+.input-group textarea {
     width: 100%;
     padding: 12px;
-    border: 2px solid var(--primary-color);
+    border: 2px solid #ddd;
     border-radius: 5px;
     font-size: 1rem;
     outline: none;
+    transition: 0.3s;
 }
 
-#formContacto textarea {
-    resize: none;
-    height: 150px;
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(255, 127, 80, 0.5);
 }
 
-#formContacto button {
-    padding: 12px 20px;
-    font-size: 1.2rem;
+/* ======= BOTÓN ======= */
+.btn {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
     background-color: var(--primary-color);
     color: white;
-    border: none;
-    border-radius: 5px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-transform: uppercase;
     cursor: pointer;
-    transition: background 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
-#formContacto button:hover {
-    background-color: darken(var(--primary-color), 10%);
+.btn:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
 }
 
+/* ======= MENSAJE DE RESPUESTA ======= */
 #respuesta {
-    margin-top: 15px;
-    font-size: 1.2rem;
-    color: var(--text-color);
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--primary-color);
 }
 
-/* ========== RESPONSIVIDAD ========== */
-@media (max-width: 768px) {
-    #contacto {
-        padding: 30px 15px;
+/* ======= RESPONSIVIDAD ======= */
+@media (max-width: 600px) {
+    #contacto .container {
+        width: 90%;
     }
-    
+
     #contacto h2 {
-        font-size: 2rem;
-    }
-    
-    #formContacto input,
-    #formContacto textarea {
-        font-size: 0.9rem;
-    }
-    
-    #formContacto button {
-        font-size: 1rem;
-        padding: 10px 15px;
+        font-size: 1.8rem;
     }
 }

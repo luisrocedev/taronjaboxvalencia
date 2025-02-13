@@ -1,73 +1,171 @@
-/* ========== ESTILOS PARA EL HEADER ========== */
+/* ========== ESTILOS PARA EL HEADER TARONJABOX 2025 ========== */
+:root {
+    --primary-color: #ff6f61;
+    --secondary-color: #ffcb74;
+    --text-color: #ffffff;
+    --menu-bg: rgba(34, 34, 59, 0.85);
+    --blur: 10px;
+    --transition: 0.4s ease;
+    --font-primary: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+}
+
+/* ========== ESTILO DEL HEADER ========== */
 header {
     width: 100%;
-    background-color: var(--primary-color);
-    padding: 15px 20px;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
+    background-color: var(--menu-bg);
+    backdrop-filter: blur(var(--blur));
+    padding: 15px 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: background-color var(--transition);
 }
 
+header.scrolled {
+    background-color: rgba(34, 34, 59, 0.95);
+}
+
+/* ========== NAVBAR ========== */
 nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: auto;
 }
 
+/* ========== LOGO ========== */
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: color var(--transition);
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
+
+.logo:hover {
+    color: var(--secondary-color);
+}
+
+/* ========== MENÚ PRINCIPAL ========== */
 #menu {
     list-style: none;
     display: flex;
-    gap: 20px;
-    padding: 0;
+    align-items: center;
+    gap: 30px;
 }
 
 #menu li {
     display: inline-block;
+    white-space: nowrap; /* Evita saltos de línea en los elementos del menú */
 }
 
 #menu li a {
     text-decoration: none;
-    color: white;
-    font-size: 1.2rem;
-    font-weight: bold;
-    transition: color 0.3s ease-in-out;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color var(--transition);
+    padding: 10px 15px; /* Espaciado interno para mejor clicabilidad */
+    display: inline-block; /* Asegura que todo el enlace sea clickeable */
+}
+
+#menu li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    margin-top: 5px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    border-radius: 2px;
+    transition: width var(--transition);
 }
 
 #menu li a:hover {
     color: var(--secondary-color);
 }
 
-/* ========== RESPONSIVIDAD ========== */
+#menu li a:hover::after {
+    width: 100%;
+}
+
+/* ========== MENÚ HAMBURGUESA (MÓVIL) ========== */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform var(--transition);
+}
+
+.menu-toggle.active {
+    transform: rotate(90deg);
+}
+
+/* ========== MENÚ RESPONSIVO ========== */
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        align-items: center;
+    .menu-toggle {
+        display: block;
     }
-    
+
     #menu {
-        display: none;
         flex-direction: column;
-        gap: 15px;
-        width: 100%;
-        text-align: center;
-        background-color: var(--primary-color);
         position: absolute;
         top: 100%;
         left: 0;
-        padding: 15px 0;
+        width: 100%;
+        background-color: var(--menu-bg);
+        backdrop-filter: blur(var(--blur));
+        padding: 20px 0;
+        transform: translateY(-20px);
+        opacity: 0;
+        pointer-events: none;
+        text-align: center;
+        transition: all var(--transition);
     }
 
     #menu.active {
-        display: flex;
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
     }
 
-    .menu-toggle {
+    #menu li {
+        margin: 10px 0;
+    }
+
+    #menu li a {
         display: block;
-        background: none;
-        border: none;
-        font-size: 2rem;
-        color: white;
-        cursor: pointer;
+        padding: 15px;
+        font-size: 1.2rem;
+    }
+}
+
+/* ========== MODO CLARO/AUTO ========== */
+@media (prefers-color-scheme: light) {
+    :root {
+        --text-color: #22223b;
+        --menu-bg: rgba(255, 255, 255, 0.85);
+        --primary-color: #3d5a80;
+        --secondary-color: #ee6c4d;
+    }
+
+    header {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
 }

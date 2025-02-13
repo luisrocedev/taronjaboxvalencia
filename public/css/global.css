@@ -26,6 +26,7 @@ body {
     line-height: 1.6;
 }
 
+/* ========== CONTENEDOR PRINCIPAL ========== */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -33,27 +34,30 @@ body {
     padding: 20px 0;
 }
 
+/* ========== TIPOGRAFÍA ========== */
 h1, h2, h3 {
     color: var(--dark-color);
     font-weight: bold;
 }
 
-/* ========== BOTONES ========== */
+/* ========== BOTONES MODERNOS ========== */
 .btn {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 12px 24px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     background-color: var(--primary-color);
     color: white;
     text-transform: uppercase;
     font-weight: bold;
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .btn:hover {
-    background-color: darken(var(--primary-color), 10%);
+    filter: brightness(0.9);
+    transform: scale(1.05);
 }
 
 /* ========== FLEXBOX UTILITIES ========== */
@@ -69,12 +73,21 @@ h1, h2, h3 {
     align-items: center;
 }
 
-/* ========== RESPONSIVIDAD ========== */
+
+
+/* ========== RESPONSIVIDAD MEJORADA ========== */
 @media (max-width: 768px) {
     html {
         font-size: 14px;
     }
     .container {
         width: 95%;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 10px;
     }
 }

@@ -13,14 +13,28 @@
 <body>
 
     <section id="contacto">
-        <h2>Contacto</h2>
-        <form id="formContacto">
-            <input type="text" name="nombre" placeholder="Tu Nombre" required>
-            <input type="email" name="email" placeholder="Tu Email" required>
-            <textarea name="mensaje" placeholder="Tu Mensaje" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
-        <p id="respuesta"></p>
+        <div class="container">
+            <h2>Contacto</h2>
+            <p>¿Tienes dudas? Escríbenos y te responderemos lo antes posible.</p>
+
+            <form id="formContacto">
+                <div class="input-group">
+                    <input type="text" name="nombre" placeholder="Tu Nombre" required>
+                </div>
+
+                <div class="input-group">
+                    <input type="email" name="email" placeholder="Tu Email" required>
+                </div>
+
+                <div class="input-group">
+                    <textarea name="mensaje" placeholder="Tu Mensaje" required></textarea>
+                </div>
+
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+
+            <p id="respuesta"></p>
+        </div>
     </section>
 
     <script src="contacto.js"></script>
