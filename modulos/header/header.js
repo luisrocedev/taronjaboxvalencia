@@ -1,5 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
     // ============================
+    // Calcular dinámicamente la altura del header
+    // ============================
+    const header = document.querySelector('header');
+    if (header) {
+        const headerHeight = header.offsetHeight;
+        document.documentElement.style.setProperty('--header-height', `${headerHeight}px`);
+        console.log(`Altura dinámica del header establecida en: ${headerHeight}px`);
+    }
+
+    // ============================
     // Detectar ruta base para el fetch dinámico
     // ============================
     const currentPath = window.location.pathname;
@@ -63,7 +73,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // ============================
     // Cambiar color del header al hacer scroll
     // ============================
-    const header = document.querySelector("header");
     if (header) {
         window.addEventListener("scroll", () => {
             if (window.scrollY > 80) {

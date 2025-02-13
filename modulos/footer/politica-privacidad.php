@@ -22,8 +22,11 @@
     </div>
 
     <!-- Cargar estilos -->
-    <link rel="stylesheet" href="modulos/footer/footer.css">
+    <style>
+        <?php include __DIR__ . "/footer.css"; ?>
+    </style>
 
     <!-- Cargar FontAwesome para iconos -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous"></script>
+
 </footer>

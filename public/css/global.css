@@ -1,6 +1,6 @@
 /* ========== RESET GLOBAL Y ESTILOS GENERALES ========== */
 :root {
-    --primary-color: #ff7f50;
+    --primary-color: #ff7f50;    /* DarkOrange */
     --secondary-color: #fdfdfd;
     --text-color: #333;
     --dark-color: #222;
@@ -8,6 +8,7 @@
     --font-family: 'Poppins', sans-serif;
 }
 
+/* ======= RESETEO Y CONFIGURACIÓN BÁSICA ======= */
 * {
     margin: 0;
     padding: 0;
@@ -16,31 +17,45 @@
     scroll-behavior: smooth;
 }
 
-html {
-    font-size: 16px;
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;  /* Evitar scroll horizontal */
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     background-color: var(--secondary-color);
     color: var(--text-color);
     line-height: 1.6;
+    min-height: 100vh;
+    width: 100%;
 }
 
-/* ========== CONTENEDOR PRINCIPAL ========== */
+/* ======= CONTENEDOR PRINCIPAL ======= */
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px 0;
+    flex: 1;
+    box-sizing: border-box;
 }
 
-/* ========== TIPOGRAFÍA ========== */
+/* ======= TIPOGRAFÍA ======= */
 h1, h2, h3 {
     color: var(--dark-color);
     font-weight: bold;
+    margin-bottom: 10px;
 }
 
-/* ========== BOTONES MODERNOS ========== */
+p {
+    margin-bottom: 10px;
+}
+
+/* ======= BOTONES MODERNOS ======= */
 .btn {
     display: inline-block;
     padding: 12px 24px;
@@ -52,7 +67,9 @@ h1, h2, h3 {
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    white-space: nowrap;
 }
 
 .btn:hover {
@@ -60,7 +77,11 @@ h1, h2, h3 {
     transform: scale(1.05);
 }
 
-/* ========== FLEXBOX UTILITIES ========== */
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* ======= FLEXBOX UTILITIES ======= */
 .flex-center {
     display: flex;
     justify-content: center;
@@ -73,9 +94,26 @@ h1, h2, h3 {
     align-items: center;
 }
 
+.flex-space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+/* ======= UTILERÍAS ADICIONALES ======= */
+.text-center {
+    text-align: center;
+}
 
-/* ========== RESPONSIVIDAD MEJORADA ========== */
+.hidden {
+    display: none;
+}
+
+.full-width {
+    width: 100%;
+}
+
+/* ======= RESPONSIVIDAD MEJORADA ======= */
 @media (max-width: 768px) {
     html {
         font-size: 14px;
