@@ -9,10 +9,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
             data.forEach(servicio => {
                 let section = document.createElement("div");
+                section.classList.add("fisioterapia-item");
                 section.innerHTML = `
                     <h3>${servicio.nombre}</h3>
                     <p>${servicio.descripcion}</p>
-                    <p>Costo: ${servicio.costo} €</p>
+                    <div class="costo">Costo: ${servicio.costo} €</div>
                 `;
                 container.appendChild(section);
             });

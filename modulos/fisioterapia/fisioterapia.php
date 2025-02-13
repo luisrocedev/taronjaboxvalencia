@@ -13,9 +13,10 @@
 <body>
 
     <section id="fisioterapia">
-        <h2>Servicios de Fisioterapia</h2>
-        <div id="infoFisioterapia">
-            <p>Cargando información...</p>
+        <h2 class="titulo-seccion">Servicios de Fisioterapia</h2>
+        <p class="descripcion-seccion">Ofrecemos tratamientos personalizados para tu bienestar y recuperación.</p>
+        <div id="infoFisioterapia" class="fisioterapia-container">
+            <p class="loading-text">Cargando información...</p>
         </div>
     </section>
 
