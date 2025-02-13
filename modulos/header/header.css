@@ -1,171 +1,139 @@
-/* ========== ESTILOS PARA EL HEADER TARONJABOX 2025 ========== */
-:root {
-    --primary-color: #ff6f61;
-    --secondary-color: #ffcb74;
-    --text-color: #ffffff;
-    --menu-bg: rgba(34, 34, 59, 0.85);
-    --blur: 10px;
-    --transition: 0.4s ease;
-    --font-primary: 'Inter', sans-serif;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: var(--font-primary);
-}
-
-/* ========== ESTILO DEL HEADER ========== */
+/* ======= HEADER STICKY Y RESPONSIVO ======= */
 header {
-    width: 100%;
     position: fixed;
     top: 0;
-    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    background-color: var(--menu-bg);
-    backdrop-filter: blur(var(--blur));
-    padding: 15px 30px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    transition: background-color var(--transition);
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
+/* Cambia el fondo al hacer scroll */
 header.scrolled {
-    background-color: rgba(34, 34, 59, 0.95);
+    background-color: var(--dark-color);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* ========== NAVBAR ========== */
-nav {
+/* ======= NAVBAR ======= */
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 15px 20px;
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
 }
 
-/* ========== LOGO ========== */
-.logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    cursor: pointer;
-    color: var(--text-color);
-    transition: color var(--transition);
-    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+/* ======= LOGO ======= */
+.logo img {
+    height: 60px;
+    width: auto;
+    max-width: 150px;
+    transition: transform 0.3s ease-in-out;
 }
 
-.logo:hover {
-    color: var(--secondary-color);
+/* Efecto hover en el logo */
+.logo img:hover {
+    transform: scale(1.1);
 }
 
-/* ========== MENÚ PRINCIPAL ========== */
-#menu {
-    list-style: none;
+/* Cuando se hace scroll, el logo se hace más pequeño */
+.scrolled .logo img {
+    height: 50px;
+}
+
+/* ======= MENÚ ======= */
+.nav-links {
     display: flex;
-    align-items: center;
-    gap: 30px;
+    align-items: center;  /* Asegura que estén alineados verticalmente */
+    justify-content: center;  /* Centra los elementos si es necesario */
+    gap: 20px;  /* Espacio entre los enlaces */
+    list-style: none;
+    flex-wrap: nowrap;  /* Evita que los elementos salten a otra línea */
 }
 
-#menu li {
-    display: inline-block;
-    white-space: nowrap; /* Evita saltos de línea en los elementos del menú */
+.nav-links li {
+    display: inline-block;  /* Asegura que los elementos estén en línea */
 }
 
-#menu li a {
+.nav-links li a {
     text-decoration: none;
-    color: var(--text-color);
-    font-weight: 500;
     font-size: 1.1rem;
-    transition: color var(--transition);
-    padding: 10px 15px; /* Espaciado interno para mejor clicabilidad */
-    display: inline-block; /* Asegura que todo el enlace sea clickeable */
+    font-weight: 600;
+    color: var(--dark-color);
+    transition: color 0.3s;
+    white-space: nowrap;  /* Evita que los textos se dividan en varias líneas */
 }
 
-#menu li a::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 3px;
-    margin-top: 5px;
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-    border-radius: 2px;
-    transition: width var(--transition);
+/* Cuando el usuario hace scroll */
+.scrolled .nav-links li a {
+    color: white;
 }
 
-#menu li a:hover {
-    color: var(--secondary-color);
+.nav-links li a:hover {
+    color: var(--primary-color);
 }
 
-#menu li a:hover::after {
-    width: 100%;
-}
-
-/* ========== MENÚ HAMBURGUESA (MÓVIL) ========== */
+/* ======= MENÚ HAMBURGUESA (MÓVIL) ======= */
 .menu-toggle {
     display: none;
     background: none;
     border: none;
-    color: var(--text-color);
-    font-size: 2rem;
     cursor: pointer;
-    transition: transform var(--transition);
+    flex-direction: column;
+    gap: 5px;
 }
 
-.menu-toggle.active {
-    transform: rotate(90deg);
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--dark-color);
+    transition: 0.3s;
 }
 
-/* ========== MENÚ RESPONSIVO ========== */
+/* Animación del botón hamburguesa */
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ======= RESPONSIVIDAD ======= */
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    #menu {
-        flex-direction: column;
+    .nav-links {
+        flex-direction: column;  /* Para móviles, sí permite que los enlaces se apilen */
+        background-color: white;
         position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: var(--menu-bg);
-        backdrop-filter: blur(var(--blur));
-        padding: 20px 0;
-        transform: translateY(-20px);
-        opacity: 0;
-        pointer-events: none;
-        text-align: center;
-        transition: all var(--transition);
+        top: 60px;
+        right: 0;
+        width: 200px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        display: none;
     }
 
-    #menu.active {
-        transform: translateY(0);
-        opacity: 1;
-        pointer-events: auto;
+    .nav-links.active {
+        display: flex;
     }
 
-    #menu li {
-        margin: 10px 0;
+    .menu-toggle {
+        display: flex;
     }
 
-    #menu li a {
-        display: block;
-        padding: 15px;
-        font-size: 1.2rem;
-    }
-}
-
-/* ========== MODO CLARO/AUTO ========== */
-@media (prefers-color-scheme: light) {
-    :root {
-        --text-color: #22223b;
-        --menu-bg: rgba(255, 255, 255, 0.85);
-        --primary-color: #3d5a80;
-        --secondary-color: #ee6c4d;
+    .scrolled .menu-toggle span {
+        background-color: white;
     }
 
-    header {
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Logo más pequeño en móviles */
+    .logo img {
+        height: 50px;
     }
 }

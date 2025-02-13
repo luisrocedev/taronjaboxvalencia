@@ -2,6 +2,7 @@
 // Detectar si estamos en un módulo o en el index
 $basePath = (strpos($_SERVER['SCRIPT_NAME'], "/modulos/") !== false) ? "../header/" : "modulos/header/";
 $cssPath = (strpos($_SERVER['SCRIPT_NAME'], "/modulos/") !== false) ? "../../public/css/" : "public/css/";
+$homePath = (strpos($_SERVER['SCRIPT_NAME'], "/modulos/") !== false) ? "../../index.php" : "index.php";
 ?>
 
 <!DOCTYPE html>
@@ -24,17 +25,23 @@ $cssPath = (strpos($_SERVER['SCRIPT_NAME'], "/modulos/") !== false) ? "../../pub
 
 <body>
 
-    <!-- ========== HEADER MODERNO 2025 ========== -->
+    <!-- ========== HEADER MODERNO ========== -->
     <header>
-        <nav>
-            <!-- Logo -->
-            <div class="logo">TaronjaBox</div>
+        <nav class="navbar">
+            <!-- Logo con redirección corregida -->
+            <a href="<?php echo $homePath; ?>" class="logo">
+                <img src="<?php echo $basePath; ?>img/logo.png" alt="TaronjaBox">
+            </a>
 
             <!-- Botón del menú hamburguesa (móvil) -->
-            <button class="menu-toggle" aria-label="Abrir menú de navegación">☰</button>
+            <button class="menu-toggle" aria-label="Abrir menú de navegación">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-            <!-- Menú de navegación -->
-            <ul id="menu">
+            <!-- Menú de navegación dinámico -->
+            <ul id="menu" class="nav-links">
                 <!-- Los enlaces del menú se cargarán dinámicamente desde `header.js` -->
             </ul>
         </nav>

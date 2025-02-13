@@ -7,7 +7,8 @@ require_once '../config/db_connect.php';
 
 // Detectar si estamos en local o en el servidor
 if ($_SERVER['HTTP_HOST'] == "localhost") {
-    $base_url = "http://localhost/GitHub/taronjaboxvalencia/";  // Local
+    // $base_url = "http://localhost/GitHub/taronjaboxvalencia/";  // Local
+    $base_url = "http://localhost/taronjaboxvalencia/";  // Local
 } else {
     $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/";  // Servidor
 }

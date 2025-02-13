@@ -1,6 +1,7 @@
 <section id="destacado">
-    <div id="infoDestacado">
-        <p>Cargando contenido...</p>
+    <h2 class="titulo-seccion">Destacados</h2>
+    <div id="infoDestacado" class="destacado-container">
+        <p class="loading-text">Cargando contenido...</p>
     </div>
 </section>
 
