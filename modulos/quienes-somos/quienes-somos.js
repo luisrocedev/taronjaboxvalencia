@@ -1,19 +1,26 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
     fetch("../../backend/api/api_quienes_somos.php")
-        .then(response => response.json())
-        .then(data => {
-            let container = document.querySelector("#infoQuienesSomos");
+        .then((response) => response.json())
+        .then((data) => {
+            const titleEl = document.querySelector("#quienes-somos h3");
+            const textEl = document.querySelector("#infoQuienesSomos p");
+            const container = document.querySelector("#infoQuienesSomos");
+
+            // Limpiar contenedor
             container.innerHTML = "";
-            data.forEach(persona => {
-                let section = document.createElement("div");
-                section.classList.add("card");
-                section.innerHTML = `
-                    <img src="${persona.imagen}" alt="${persona.title}">
-                    <h3>${persona.title}</h3>
-                    <p>${persona.content}</p>
-                `;
-                container.appendChild(section);
-            });
+
+            // Asignar contenido dinámico (solo uno si es sección de presentación)
+            if (data.length > 0) {
+                const info = data[0];
+                titleEl.textContent = info.title;
+                textEl.textContent = info.content;
+
+                // Insertar imagen debajo del texto
+                const img = document.createElement("img");
+                img.src = info.imagen;
+                img.alt = info.title;
+                container.appendChild(img);
+            }
         })
-        .catch(error => console.error("Error al cargar la información:", error));
+        .catch((error) => console.error("Error al cargar la información:", error));
 });
