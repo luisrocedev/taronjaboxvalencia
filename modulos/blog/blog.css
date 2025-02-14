@@ -1,13 +1,27 @@
-/* 🌟 BLOG ESTILO PREMIUM */
-#blog {
-    min-height: 100vh;
-    padding: 60px 20px;
-    background-color: #f3f3f3;
-    text-align: center;
+/* 🌐 BLOG CSS - TaronjaBox */
+
+/* ======= 🔄 RESET ======= */
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-/* 🖼️ CABECERA */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* ======= 📰 SECCIÓN BLOG ======= */
+#blog {
+    min-height: 100vh;
+    padding: 60px 20px 40px;
+    text-align: center;
+    background: linear-gradient(180deg, #fff 0%, #f4f4f4 100%);
+}
+
+/* 🏷️ Encabezado */
 .blog-header {
     margin-bottom: 40px;
 }
@@ -15,126 +29,117 @@
 .blog-header h2 {
     font-size: 2.5rem;
     color: #ff7f50;
-    margin-bottom: 15px;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .blog-header p {
-    font-size: 1.2rem;
+    margin-top: 10px;
     color: #555;
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 10px auto;
 }
 
-/* 🖼️ CONTENEDOR DE PUBLICACIONES */
+/* 🖼️ CONTENEDOR DE ENTRADAS */
 .blog-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 30px;
-    justify-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
 }
 
-/* 🎴 TARJETA DEL BLOG */
+/* 📑 TARJETA DE BLOG */
 .blog-card {
     background-color: #fff;
     border-radius: 15px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    max-width: 400px;
-    text-align: left;
-    transition: transform 0.4s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
 }
 
 .blog-card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 127, 80, 0.5);
 }
 
-/* 🖼️ IMAGEN DE LA TARJETA */
-.blog-image {
+/* 🖼️ Imagen */
+.blog-card img {
     width: 100%;
-    height: 200px;
+    height: 180px;
     object-fit: cover;
-    display: block;
+    transition: transform 0.4s ease;
 }
 
-/* 🖋️ CONTENIDO DE LA TARJETA */
+.blog-card:hover img {
+    transform: scale(1.05);
+}
+
+/* ✍️ Contenido */
 .blog-content {
     padding: 20px;
+    flex: 1;
 }
 
-.blog-title {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+.blog-content h3 {
     color: #333;
-}
-
-.blog-title a {
-    text-decoration: none;
-    color: inherit;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
     transition: color 0.3s ease;
 }
 
-.blog-title a:hover {
+.blog-content h3:hover {
     color: #ff7f50;
 }
 
-.blog-excerpt {
+.blog-content p {
     font-size: 1rem;
     color: #666;
-    margin-bottom: 20px;
+    line-height: 1.5;
+    margin-bottom: 15px;
 }
 
-/* 📆 PIE DE LA TARJETA */
-.blog-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.blog-content .blog-date {
     font-size: 0.9rem;
     color: #999;
 }
 
-.blog-date {
-    font-size: 0.85rem;
-}
-
-.btn-read-more {
-    padding: 10px 15px;
-    background: linear-gradient(135deg, #ff7f50, #e65b28);
-    color: #fff;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: transform 0.3s ease;
-}
-
-.btn-read-more:hover {
-    transform: translateY(-3px);
-    background: linear-gradient(135deg, #e65b28, #c94d1a);
-}
-
-/* 🚨 MENSAJES */
-.no-posts {
-    font-size: 1.5rem;
-    color: #888;
-    margin-top: 20px;
-}
-
-.error {
+/* 🔍 MENSAJE DE CARGANDO */
+.loading-text {
+    text-align: center;
     font-size: 1.2rem;
-    color: red;
-    margin-top: 20px;
+    color: #666;
+    margin-top: 40px;
+    animation: fadeIn 1.5s infinite;
 }
 
-/* 📱 RESPONSIVO */
-@media (max-width: 480px) {
+@keyframes fadeIn {
+    0% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 600px) {
     .blog-header h2 {
         font-size: 2rem;
     }
 
-    .blog-card {
-        max-width: 90%;
+    .blog-container {
+        grid-template-columns: 1fr;
     }
 
-    .blog-excerpt {
+    .blog-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .blog-content p {
         font-size: 0.95rem;
     }
 }
