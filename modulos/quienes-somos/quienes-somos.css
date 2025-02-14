@@ -10,7 +10,7 @@
     text-align: center;
     background-color: var(--color-fondo, #fff);
     color: #333;
-    padding: 60px 20px 100px; /* Añadimos más padding inferior */
+    padding: 60px 20px 100px; /* Más padding inferior */
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
@@ -24,6 +24,10 @@
     margin-bottom: 40px;
     text-transform: none;
     animation: fadeInDown 1s ease;
+    width: 100%; /* Ocupar toda la anchura */
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* === 🖼️ IMAGEN CORPORATIVA === */
@@ -35,8 +39,11 @@
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
     transition: transform 0.4s ease;
     margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+/* Efecto al pasar el mouse */
 #infoQuienesSomos img:hover {
     transform: scale(1.03);
 }
@@ -51,7 +58,9 @@
     padding: 0 20px;
     text-align: center;
     transition: color 0.3s ease;
-    margin-bottom: 60px; /* Más margen inferior para evitar colisión */
+    margin-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #infoQuienesSomos p:hover {
@@ -95,6 +104,6 @@ footer {
 
     #infoQuienesSomos p {
         font-size: 1.2rem;
-        margin-bottom: 80px; /* Más espacio en móviles */
+        margin-bottom: 80px;
     }
 }
