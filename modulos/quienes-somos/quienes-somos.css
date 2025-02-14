@@ -1,96 +1,67 @@
-/* ====== 🌟 QUIÉNES SOMOS - ESTILO PREMIUM ====== */
-
+/* 🌟 QUIÉNES SOMOS - ESTILO PREMIUM */
 #quienes-somos {
-    position: relative;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    min-height: 100vh;
     text-align: center;
-    color: #fff;
-    background: var(--color-fondo, #f3f4f6);
-    overflow: hidden;
-    padding-top: 80px;
+    background-color: var(--color-fondo, #fff);
+    color: #333;
+    padding: 60px 20px 0;
+    box-sizing: border-box;
 }
 
-/* 🎯 Título */
+/* 🖼️ Título */
 #quienes-somos h3 {
-    font-size: 3rem;
-    margin-bottom: 30px;
+    font-size: 2.5rem;
     color: #ff7f50;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
-    z-index: 2;
-    position: relative;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+    text-transform: none;
 }
 
-/* 🎨 Contenedor de la imagen */
-#infoQuienesSomos {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-    margin-top: 20px;
-}
-
-/* 🖼️ Imagen responsiva */
+/* 🖼️ Imagen */
 #infoQuienesSomos img {
     width: 100%;
-    height: 70vh;
+    height: 60vh;
     object-fit: cover;
-    border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-    transition: transform 0.5s ease;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s ease;
 }
 
 #infoQuienesSomos img:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
-/* 📖 Texto sobre la imagen */
-.card p {
+/* 📖 Texto descriptivo */
+#infoQuienesSomos p {
+    margin-top: 25px;
     font-size: 1.4rem;
-    color: #fff;
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.6);
-    padding: 15px 25px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
-    max-width: 80%;
-    line-height: 1.5;
-    text-shadow: 1px 1px 2px #000;
+    line-height: 1.6;
+    color: #555;
+    max-width: 800px;
+    padding: 0 15px;
+    text-align: center;
+    transition: color 0.3s ease;
 }
 
-/* 🔘 Botón de llamada a la acción */
-.card .cta-button {
-    margin-top: 20px;
-    display: inline-block;
-    padding: 15px 30px;
-    background: linear-gradient(135deg, #ff7f50, #e65b28);
-    color: #fff;
-    text-decoration: none;
-    border-radius: 10px;
-    font-weight: bold;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+#infoQuienesSomos p:hover {
+    color: #222;
 }
 
-.card .cta-button:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(255, 127, 80, 0.7);
-}
-
-/* 🌱 Responsivo */
+/* 📱 Responsivo */
 @media (max-width: 768px) {
     #quienes-somos h3 {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 
-    .card p {
-        font-size: 1.1rem;
-        bottom: 15px;
-        padding: 12px 20px;
+    #infoQuienesSomos img {
+        height: 50vh;
+    }
+
+    #infoQuienesSomos p {
+        font-size: 1.2rem;
     }
 }
