@@ -20,7 +20,8 @@
 
     <script src="quienes-somos.js"></script>
 
-    <?php include("../modulos/footer/footer.php"); ?>
+    <?php include($_SERVER['DOCUMENT_ROOT'] . "/modulos/footer/footer.php"); ?>
+
 
 
 </body>
