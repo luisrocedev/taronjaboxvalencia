@@ -12,7 +12,7 @@
     text-align: center;
 }
 
-/* Texto arriba */
+/* Título arriba */
 #quienes-somos h3 {
     font-size: 2.5rem;
     margin-top: 60px;
@@ -22,14 +22,16 @@
     z-index: 1;
 }
 
-#infoQuienesSomos p {
-    max-width: 800px;
-    margin: 0 auto 30px;
-    padding: 0 20px;
-    font-size: 1.3rem;
-    line-height: 1.7;
-    color: #444;
-    z-index: 1;
+/* Contenedor de imagen y texto */
+#infoQuienesSomos {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    margin-top: auto;
+    padding-bottom: 40px;
 }
 
 /* Imagen corporativa */
@@ -37,10 +39,22 @@
     width: 100%;
     height: 60vh;
     object-fit: cover;
-    margin-top: auto;
     border-top: 5px solid #ff7f50;
     border-radius: 20px 20px 0 0;
     box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+}
+
+/* Texto debajo de la imagen */
+#infoQuienesSomos p {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-size: 1.3rem;
+    line-height: 1.7;
+    color: #444;
+    z-index: 1;
+    text-align: center;
 }
 
 /* Responsivo */
