@@ -22,7 +22,7 @@
     </div>
 
     <!-- Cargar estilos -->
-    <link rel="stylesheet" href="modulos/footer/footer.css">
+    <link rel="stylesheet" href="/modulos/footer/footer.css">
 
     <!-- Cargar FontAwesome para iconos -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous"></script>
