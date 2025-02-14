@@ -1,23 +1,18 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
     fetch("../../backend/api/api_quienes_somos.php")
-        .then((response) => response.json())
-        .then((data) => {
-            const container = document.querySelector("#quienes-somos .content");
-
-            if (data.length > 0) {
-                const info = data[0];
-                container.innerHTML = `
-                    <h3>${info.title}</h3>
-                    <p>${info.content}</p>
-                    <a href="/contacto" class="cta-button">¡Conócenos más!</a>
+        .then(response => response.json())
+        .then(data => {
+            let container = document.querySelector("#infoQuienesSomos");
+            container.innerHTML = "";
+            data.forEach(persona => {
+                let section = document.createElement("div");
+                section.classList.add("card");
+                section.innerHTML = `
+                    <img src="${persona.imagen}" alt="${persona.title}">
+                    <p>${persona.content}</p>
                 `;
-
-                // Establecer la imagen dinámica en el fondo
-                document.querySelector("#quienes-somos").style.setProperty(
-                    "--bg-image",
-                    `url('${info.imagen}')`
-                );
-            }
+                container.appendChild(section);
+            });
         })
-        .catch((error) => console.error("Error al cargar la información:", error));
+        .catch(error => console.error("Error al cargar la información:", error));
 });

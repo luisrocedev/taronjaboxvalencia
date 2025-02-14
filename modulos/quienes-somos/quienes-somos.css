@@ -2,67 +2,71 @@
 
 #quienes-somos {
     position: relative;
-    height: 100vh;
-    color: #fff;
-    font-family: 'Poppins', sans-serif;
-    overflow: hidden;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
+    color: #fff;
+    background: var(--color-fondo, #f3f4f6);
+    overflow: hidden;
+    padding-top: 80px;
 }
 
-/* Fondo parallax */
-#quienes-somos::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
+/* 🎯 Título */
+#quienes-somos h3 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: #ff7f50;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    position: relative;
+}
+
+/* 🎨 Contenedor de la imagen */
+#infoQuienesSomos {
     width: 100%;
     height: 100%;
-    background-image: url('https://via.placeholder.com/1200x800');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    filter: brightness(0.6);
-    z-index: 1;
-    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
 }
 
-#quienes-somos:hover::before {
+/* 🖼️ Imagen responsiva */
+#infoQuienesSomos img {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s ease;
+}
+
+#infoQuienesSomos img:hover {
     transform: scale(1.05);
 }
 
-/* Contenido */
-#quienes-somos .content {
-    position: relative;
-    z-index: 2;
-    padding: 40px 20px;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-    animation: fadeIn 1.5s ease;
-    max-width: 900px;
+/* 📖 Texto sobre la imagen */
+.card p {
+    font-size: 1.4rem;
+    color: #fff;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+    max-width: 80%;
+    line-height: 1.5;
+    text-shadow: 1px 1px 2px #000;
 }
 
-#quienes-somos .content h3 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    color: #ff7f50;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-}
-
-#quienes-somos .content p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin-top: 15px;
-    color: #f3f4f6;
-}
-
-/* Botón de acción */
-#quienes-somos .cta-button {
-    margin-top: 30px;
+/* 🔘 Botón de llamada a la acción */
+.card .cta-button {
+    margin-top: 20px;
     display: inline-block;
     padding: 15px 30px;
     background: linear-gradient(135deg, #ff7f50, #e65b28);
@@ -73,34 +77,20 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#quienes-somos .cta-button:hover {
+.card .cta-button:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(255, 127, 80, 0.7);
 }
 
-/* Animación */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 /* 🌱 Responsivo */
 @media (max-width: 768px) {
-    #quienes-somos .content {
-        padding: 30px 15px;
+    #quienes-somos h3 {
+        font-size: 2.2rem;
     }
 
-    #quienes-somos .content h3 {
-        font-size: 2rem;
-    }
-
-    #quienes-somos .content p {
-        font-size: 1rem;
+    .card p {
+        font-size: 1.1rem;
+        bottom: 15px;
+        padding: 12px 20px;
     }
 }
