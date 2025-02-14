@@ -3,112 +3,92 @@
 /* ======= 🎨 VARIABLES DE COLOR ======= */
 :root {
     --color-primario: #ff7f50;   /* Dark Orange */
-    --color-secundario: #333;     /* Gris oscuro */
+    --color-secundario: #34495e; /* Azul oscuro */
     --color-texto: #555;          /* Gris texto */
-    --color-fondo: #f3f3f3;       /* Fondo claro */
+    --color-fondo: #ffffff;       /* Fondo claro */
     --color-hover: #e65b28;       /* Hover naranja oscuro */
-    --color-borde: #ccc;          /* Bordes suaves */
 }
 
 /* ======= 🖼️ ESTILOS GENERALES ======= */
 body {
-    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
     background-color: var(--color-fondo);
     color: var(--color-texto);
 }
 
 /* ======= 📖 SECCIÓN PRINCIPAL ======= */
 #quienes-somos {
-    text-align: center;
-    padding: 60px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-#quienes-somos h3 {
-    font-size: 2.5rem;
-    color: var(--color-primario);
-    margin-bottom: 30px;
-    text-transform: uppercase;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-    letter-spacing: 2px;
-}
-
-/* ======= 📦 CONTENEDOR DE TARJETAS ======= */
-#infoQuienesSomos {
+    height: 100vh;
     display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-    justify-content: center;
-    align-items: stretch;
-}
-
-/* ======= 🪪 TARJETAS DE PERSONAS ======= */
-.card {
-    flex: 1 1 calc(33.333% - 30px);
-    background-color: #fff;
-    border: 1px solid var(--color-borde);
-    border-radius: 15px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     text-align: center;
-    max-width: 350px;
+    overflow: hidden;
 }
 
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* ======= 🖼️ IMAGEN DE PERFIL ======= */
-.card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    transition: transform 0.4s ease;
-}
-
-.card:hover img {
-    transform: scale(1.05);
-}
-
-/* ======= 🏷️ TITULO ======= */
-.card h3 {
-    font-size: 1.5rem;
-    color: var(--color-secundario);
-    margin-bottom: 10px;
+/* ======= 📝 TEXTO SUPERIOR ======= */
+#quienes-somos h3 {
+    font-size: 3rem;
+    color: var(--color-primario);
+    margin: 60px 0 40px 0;
     text-transform: capitalize;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1.5px;
+    z-index: 2;
 }
 
-/* ======= 📝 DESCRIPCIÓN ======= */
-.card p {
-    font-size: 1rem;
-    color: var(--color-texto);
-    line-height: 1.5;
+#infoQuienesSomos p {
+    font-size: 1.2rem;
+    color: var(--color-secundario);
+    max-width: 900px;
+    margin: 0 20px 50px 20px;
+    line-height: 1.6;
+    z-index: 2;
+}
+
+/* ======= 🌆 IMAGEN CORPORATIVA ======= */
+#infoQuienesSomos {
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    background: url('img/corporativa.jpg') center/cover no-repeat;
+    position: relative;
+    margin-top: 20px;
+    border-top: 5px solid var(--color-primario);
+}
+
+#infoQuienesSomos::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(255, 127, 80, 0.5) 0%, rgba(0, 0, 0, 0.7) 100%);
+    z-index: 1;
 }
 
 /* ======= 📱 RESPONSIVE DESIGN ======= */
-@media (max-width: 992px) {
-    .card {
-        flex: 1 1 calc(50% - 20px);
+@media (max-width: 768px) {
+    #quienes-somos h3 {
+        font-size: 2.5rem;
     }
 
-    #quienes-somos h3 {
-        font-size: 2rem;
+    #infoQuienesSomos p {
+        font-size: 1rem;
     }
 }
 
-@media (max-width: 576px) {
-    .card {
-        flex: 1 1 100%;
+@media (max-width: 480px) {
+    #quienes-somos h3 {
+        font-size: 2rem;
+        margin-top: 40px;
     }
 
-    #quienes-somos {
-        padding: 40px 15px;
+    #infoQuienesSomos p {
+        font-size: 0.95rem;
     }
 }
