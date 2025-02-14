@@ -1,38 +1,28 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
     fetch("../../backend/api/api_blog.php")
         .then(response => response.json())
         .then(data => {
-            const container = document.getElementById("blog-container");
-            container.innerHTML = ""; // Limpiar antes de agregar contenido
+            let blogContainer = document.querySelector("#blog-container");
+            blogContainer.innerHTML = "";
 
             if (data.length === 0) {
-                container.innerHTML = "<p class='loading-text'>No hay publicaciones disponibles.</p>";
+                blogContainer.innerHTML = "<p class='no-posts'>No hay publicaciones disponibles.</p>";
                 return;
             }
 
-            // Crear tarjetas de blog dinámicamente
             data.forEach(post => {
-                const article = document.createElement("div");
+                let article = document.createElement("article");
                 article.classList.add("blog-card");
                 article.innerHTML = `
-                    <img src="${post.image_url}" alt="${post.title}">
+                    <img src="${post.imagen}" alt="${post.title}" class="blog-image">
                     <div class="blog-content">
                         <h3><a href="post.php?id=${post.id}">${post.title}</a></h3>
-                        <p>${post.content.substring(0, 150)}...</p>
-                        <span class="blog-date">📅 ${post.created_at}</span>
+                        <p>${post.content.substring(0, 100)}...</p>
+                        <small>Publicado el: ${new Date(post.created_at).toLocaleDateString()}</small>
                     </div>
                 `;
-                container.appendChild(article);
-
-                // Redirigir al hacer clic en la tarjeta
-                article.addEventListener("click", () => {
-                    window.location.href = `post.php?id=${post.id}`;
-                });
+                blogContainer.appendChild(article);
             });
         })
-        .catch(error => {
-            document.getElementById("blog-container").innerHTML = 
-                `<p class="loading-text">❌ Error al cargar las publicaciones.</p>`;
-            console.error("Error al cargar el blog:", error);
-        });
+        .catch(error => console.error("Error al cargar el blog:", error));
 });
