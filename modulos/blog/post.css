@@ -1,0 +1,103 @@
+/* 🌟 POST ESTILO - TARONJABOX VALENCIA */
+
+/* Sección principal */
+#post {
+    min-height: 100vh;
+    padding: 60px 20px;
+    background: #fff;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+/* Contenedor del post */
+.post-container {
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+    background: #f5f5f5;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease;
+    box-sizing: border-box;
+}
+
+/* Título del post */
+#post-title {
+    font-size: 2.5rem;
+    color: #ff7f50;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    border-bottom: 3px solid #ff7f50;
+    padding-bottom: 15px;
+}
+
+/* Imagen destacada */
+#post-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s ease;
+}
+
+#post-image:hover {
+    transform: scale(1.02);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Contenido */
+#post-content {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+    text-indent: 2em;
+}
+
+/* Fecha */
+#post-date {
+    font-size: 0.9rem;
+    color: #777;
+    font-style: italic;
+}
+
+/* ⚙️ Animación */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 📱 Responsivo */
+@media (max-width: 768px) {
+    .post-container {
+        padding: 20px;
+    }
+
+    #post-title {
+        font-size: 2rem;
+    }
+
+    #post-content {
+        font-size: 1rem;
+    }
+
+    #post-image {
+        max-height: 300px;
+    }
+}
