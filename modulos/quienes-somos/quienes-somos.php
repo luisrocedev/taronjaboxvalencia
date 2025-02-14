@@ -20,7 +20,8 @@
 
     <script src="quienes-somos.js"></script>
 
-    <?php include("../footer/footer.php"); ?>
+    <?php include("../modulos/footer/footer.php"); ?>
+
 
 </body>
 
