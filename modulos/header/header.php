@@ -30,7 +30,7 @@ $homePath = (strpos($_SERVER['SCRIPT_NAME'], "/modulos/") !== false) ? "../../in
         <nav class="navbar">
             <!-- Logo con redirección corregida -->
             <a href="<?php echo $homePath; ?>" class="logo">
-                <img src="<?php echo $basePath; ?>img/logo.png" alt="TaronjaBox">
+                <img src="<?php echo $basePath; ?>img/favicon.png" alt="TaronjaBox">
             </a>
 
             <!-- Botón del menú hamburguesa (móvil) -->
