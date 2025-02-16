@@ -1,0 +1,134 @@
+🚀 TARONJA BOX VALENCIA - Página web frontal.
+
+❓ ¿Qué es TaronjaBox Valencia?
+
+TaronjaBox Valencia es una página web para un centro de CrossFit, en este caso, el centro deportivo TaronjaBox. 
+
+Esta web dispone de una tecnología que permite al usuario final poder acceder a las diferentes secciones y poder modificar la web de manera sencilla (sin tocar código) mediante un panel de control denominado DarkOrange, ¡panel que comentaremos en futuras publicaciones!
+
+A continuación, comentaremos las tecnologías y novedades visuales aplicadas en el proyecto.
+
+🌍 Tecnologías utilizadas:
+
+🖥 Frontend: [HTML, CSS, JavaScript, etc.]  
+🛠 Backend: [PHP, Python, Flask, MySQL, etc.]  
+📡Integraciones: [APIs, WebSockets, JSON, CSV, etc.]  
+
+En este caso vamos a comentar técnicamente lo visual (CSS) para que podáis aplicarlo a vuestros proyectos.
+
+En el video de demostración podéis observar un FadeIn, que ha sido posible al utilizar animaciones en CSS, en este caso en bienvenida.css (proyecto dividido en módulos para facilitar mejoras).
+
+Código utilizado: @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+Además, como podéis observar, el botón tiene un efecto de transición que ''brilla''; esto ha sido posible mediante una mezcla de transiciones. 
+
+🔥 ¡En próximas publicaciones, mostraremos más aspectos visuales de la página web explicando un poco del código! 
+
+🔎 Sin embargo, si queréis profundizar más, podéis acceder a nuestro GitHub https://github.com/luisrocedev/taronjaboxvalencia y poder leer nuestro README.md o incluso profundizar en los códigos del repositorio que están comentados para que podáis hacerlo vosotros mismos. 
+
+
+——————
+
+
+
+
+🚀 TARONJA BOX VALENCIA - Página web frontal.
+
+🔥 Seguimos con las publicaciones y actualizaciones de TaronjaBox Valencia.
+
+Si habéis estado atentos a la publicación anterior, ya hicimos una breve introducción al proyecto y explicamos en qué consiste y cómo funciona la página web. 
+
+A continuación haremos un breve recordatorio de las tecnologías utilizadas en el proyecto:
+
+🌍 Tecnologías utilizadas:
+
+🖥 Frontend: [HTML, CSS, JavaScript, etc.]  
+🛠 Backend: [PHP, Python, Flask, MySQL, etc.]  
+📡Integraciones: [APIs, WebSockets, JSON, CSV, etc.]  
+
+Por lo tanto, como podréis estar observando el video de demostración, en el cual hay una sección que indica "nuestros servicios", donde al pasar el cursor las "tarjetas" hacen como un pequeño aumento y se crea una pequeña sombra interior. 
+
+🔧 Explicación técnica:
+Esto ha sido posible, como comentamos en la publicación anterior, con efectos visuales en CSS; en este caso, primero para crear las "tarjetas" se ha utilizado GRID.
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+Para poder tener un espacio separado en columnas para poder trabajar y, una vez ahí, se ha utilizado. 
+
+.servicio:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+para poder aplicar ese efecto de sombra y aumento.
+
+🔥 ¡Como sabéis, en próximas publicaciones, mostraremos más aspectos visuales de la página web explicando un poco del código! 
+
+🔎 Sin embargo, si queréis profundizar más, podéis acceder a nuestro GitHub https://github.com/luisrocedev/taronjaboxvalencia y poder leer nuestro README.md o incluso profundizar en los códigos del repositorio que están comentados para que podáis hacerlo vosotros mismos. 
+
+
+—————
+
+🚀 TARONJA BOX VALENCIA - Página web frontal.
+
+🔥 Seguimos con las publicaciones y actualizaciones de TaronjaBox Valencia.
+
+Si habéis estado atentos a la publicación anterior, ya hicimos una breve introducción al proyecto y explicamos en qué consiste y cómo funciona la página web. 
+
+A continuación hablaremos de la responsividad.
+
+¿No os ha pasado que cuando accedéis mediante el móvil a una web, esta se desorganiza o está mal estructurada? Esto es debido a que la responsividad no está bien aplicada o directamente no está aplicada.
+
+Os explicamos a continuación cómo hemos resuelto este dilema.
+
+Hemos utilizado la etiqueta media que nos ayuda a que cuando un proyecto reduce su tamaño (pixeles), esta etiqueta aplica el CSS que hemos dado. Por ejemplo, cuando llegue a 400px, la barra del header desaparece e incluimos una ''hamburguesa'' para que al darle click, aparezcan las secciones de la web.
+
+Ejemplo de código en secciones.css con la etiqueta media:
+
+/* ======= RESPONSIVIDAD ======= */
+@media (max-width: 768px) {
+    .titulo-seccion {
+        font-size: 2rem;
+    }
+
+    .servicio img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo-seccion {
+        font-size: 1.8rem;
+    }
+
+    .servicio img {
+        height: 180px;
+    }
+
+    .servicio-info h3 {
+        font-size: 1.3rem;
+    }
+
+    .servicio-info p {
+        font-size: 0.9rem;
+    }
+
+    .servicio-info .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+Así podemos resolver este inconveniente.
+
+🔥 ¡Como sabéis, en próximas publicaciones, mostraremos más aspectos visuales de la página web explicando un poco del código! 
+
+🔎 Sin embargo, si queréis profundizar más, podéis acceder a nuestro GitHub https://github.com/luisrocedev/taronjaboxvalencia y poder leer nuestro README.md o incluso profundizar en los códigos del repositorio que están comentados para que podáis hacerlo vosotros mismos. 
